@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #F3B1FF;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+
+.content div h1 {
+    font-size: 50px;
+}
+
+.input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+
+.input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input input {
+    width: 300px;
+    height: 46px;
+    border-radius: 100px;
+    border: 1px solid #ccc;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 16px;
+    outline: none;
+}
+
+.input input::placeholder {
+    color: #999;
+}
+
+.input input:focus {
+    border-color: #F3B1FF;
+    box-shadow: 0 0 5px rgba(243, 177, 255, 0.5);
+}
+
+.input-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    width: 23px;
+    height: 23px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-decoration: none;
+    z-index: 1;
+}
+
+.input-icon-search {
+    background-image: url('./icon/icons8-search-32.png');
+    left: 10px;
+}
+
+.input-icon-camera {
+    background-image: url('./icon/camera-create-svgrepo-com.png');
+    right: 10px;
+}
+
+.nva {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+
+.nva div {
+    width: 700px;
+    background-color: white;
+    font-family: "Noto Sans Lao";
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    height: 5vh;
+    gap: 219px;
+    border-radius: 10px;
+}
+
+.nva-clickable-icon {
+    display: block;
+    background-repeat: no-repeat;
+    text-decoration: none;
+}
+
+.nva-icon-truck {
+    background-image: url("./icon/icons8-truck-50.png");
+    background-size: 23px 21px;
+    padding-left: 30px;
+    background-position: left 0px center;
+    line-height: 21px;
+}
+
+.nva-icon-time {
+    background-image: url("./icon/icons8-time-50.png");
+    background-size: 23px 23px;
+    padding-left: 30px;
+    background-position: left 0px center;
+    line-height: 23px;
+}
+
+.nva-icon-other {
+    background-image: url("./icon/360_F_1139791477_UXHKdITrdD6p4RQQ9QPZgEuia5Okn6UZ.png");
+    background-size: 30px 30px;
+    padding-left: 40px;
+    background-position: left 0px center;
+    line-height: 30px;
+}
+
+div a {
+    color: #000;
+    text-decoration: none;
+}
