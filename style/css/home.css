@@ -87,11 +87,9 @@ body {
     background-color: white;
     font-family: "Noto Sans Lao";
     display: flex;
-    justify-content: center;
-    flex-direction: row;
+    justify-content: space-evenly;
     align-items: center;
     height: 5vh;
-    gap: 219px;
     border-radius: 10px;
 }
 
