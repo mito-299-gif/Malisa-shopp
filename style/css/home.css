@@ -303,7 +303,17 @@ div a {
     }
 }
 
+@media (max-width: 550px) {
+    .container {
+        height: 25vh;
+    }
+}
+
 @media (max-width: 500px) {
+    .container {
+        height: 25vh;
+    }
+
     .order {
         padding: 0 5px;
     }

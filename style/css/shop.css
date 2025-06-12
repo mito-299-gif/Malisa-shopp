@@ -139,10 +139,6 @@
 }
 
 @media (max-width: 550px) {
-    body {
-        padding-bottom: 10vh;
-    }
-
     * {
         margin: 0;
         padding: 0;
@@ -168,7 +164,11 @@
     }
 
     .order-shop {
-        margin: 0 -5px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        align-items: center;
+        margin: 0 0px;
 
     }
 
