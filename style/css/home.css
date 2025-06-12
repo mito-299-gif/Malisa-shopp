@@ -18,6 +18,10 @@ body {
     font-size: 50px;
 }
 
+.container {
+    height: 30vh;
+}
+
 .input {
     display: flex;
     justify-content: center;
@@ -197,12 +201,27 @@ div a {
 
 @media (max-width: 1024px) {
     .order {
+
         padding: 0 100px;
+    }
+
+    .order-shop {
+        margin: 0;
+        padding: 0 0px;
     }
 }
 
 @media (max-width: 500px) {
     .order {
         padding: 0 5px;
+    }
+
+    .order-shop {
+        margin: 0 0px;
+
+    }
+
+    .container {
+        height: 25vh;
     }
 }
