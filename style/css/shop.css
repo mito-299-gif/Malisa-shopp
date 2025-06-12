@@ -1,7 +1,6 @@
 .order-shop {
     margin: 0;
     padding: 0 400px;
-    height: 100vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -35,6 +34,7 @@
     background-color: white;
     padding: 0 5px;
 }
+
 
 .shop-text {
     font-family: "noto sans lao";
@@ -139,27 +139,38 @@
 }
 
 @media (max-width: 550px) {
+    body {
+        padding-bottom: 10vh;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
     .shop-img {
-        width: 100px;
-        height: 100px;
+        width: 200px;
+        height: 200px;
     }
 
     .shop-text {
-        font-size: 5px;
+        font-size: 11px;
     }
 
     .shop-clickable-icon-catr {
-        width: 90%;
+        width: 95%;
         height: 100%;
     }
 
     .shop-icon-shop-catr {
         background-size: 15px 15px;
-        background-position: 80px center;
+        background-position: 180px center;
     }
 
     .order-shop {
-        margin: 0 0px;
+        margin: 0 -5px;
 
     }
+
+
 }
