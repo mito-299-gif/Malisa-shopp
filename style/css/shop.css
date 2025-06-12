@@ -138,7 +138,25 @@
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 550px) {
+    .shop-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .shop-text {
+        font-size: 5px;
+    }
+
+    .shop-clickable-icon-catr {
+        width: 90%;
+        height: 100%;
+    }
+
+    .shop-icon-shop-catr {
+        background-size: 15px 15px;
+        background-position: 80px center;
+    }
 
     .order-shop {
         margin: 0 0px;

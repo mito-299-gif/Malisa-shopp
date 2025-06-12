@@ -197,9 +197,100 @@ div a {
     background-repeat: no-repeat;
 }
 
+.nva-footer {
+    width: 100%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+}
+
+.nva-footer div {
+    width: 670px;
+    background-color: white;
+    font-family: "Noto Sans Lao";
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 7vh;
+    border-radius: 10px;
+}
+
+.nva-clickable-icon-footer {
+    display: block;
+    background-repeat: no-repeat;
+    text-decoration: none;
+}
+
+.nva-icon-img1 {
+    background-image: url("./icon/icons8-hanger-24.png");
+    background-size: 23px 21px;
+    background-repeat: no-repeat;
+    background-position: center 5px;
+    padding-top: 22px;
+    padding-left: 0;
+    line-height: normal;
+    text-align: center;
+}
+
+.nva-icon-img2 {
+    background-image: url("./icon/icons8-shopping-cart-96.png");
+    background-size: 23px 21px;
+    background-repeat: no-repeat;
+    background-position: center 5px;
+    padding-top: 22px;
+    padding-left: 0;
+    line-height: normal;
+    text-align: center;
+}
+
+.nva-icon-img3 {
+    background-image: url("./icon/icons8-wechat-50.png");
+    background-size: 23px 21px;
+    background-repeat: no-repeat;
+    background-position: center 5px;
+    padding-top: 22px;
+    padding-left: 0;
+    line-height: normal;
+    text-align: center;
+}
+
+.nva-icon-img4 {
+    background-image: url("./icon/icons8-male-user-24.png");
+    background-size: 23px 21px;
+    background-repeat: no-repeat;
+    background-position: center 5px;
+    padding-top: 22px;
+    padding-left: 0;
+    line-height: normal;
+    text-align: center;
+}
+
+@media (max-width: 1300px) {
+    .nva-footer div {
+        width: 1200px;
+
+    }
+}
+
+
+@media (max-width: 1100px) {
+    .nva-footer div {
+        width: 1057px;
+
+    }
+}
 
 
 @media (max-width: 1024px) {
+    .nva-footer div {
+        width: 835px;
+
+    }
+
     .order {
 
         padding: 0 100px;
