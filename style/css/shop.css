@@ -1,6 +1,7 @@
 .order-shop {
     margin: 0;
     padding: 0 400px;
+    height: 100vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -118,7 +119,7 @@
 @media (max-width: 1300px) {
 
     .order-shop {
-        padding: 0 0px;
+        padding: 0 4px;
     }
 
     .shop-img {
@@ -138,11 +139,32 @@
     }
 }
 
-@media (max-width: 550px) {
-    * {
-        margin: 0;
-        padding: 0;
+@media (max-width: 817px) {
+
+
+    .order-shop {
+        margin: 0 -5px;
+        height: 110vh;
+
     }
+
+
+}
+
+@media (max-width: 807px) {
+
+
+    .order-shop {
+        margin: 0 0px;
+        height: 165vh;
+
+    }
+
+
+}
+
+
+@media (max-width: 550px) {
 
     .shop-img {
         width: 200px;
@@ -161,6 +183,12 @@
     .shop-icon-shop-catr {
         background-size: 15px 15px;
         background-position: 180px center;
+    }
+
+    .order-shop {
+        margin: 0 0px;
+        height: 203vh;
+
     }
 
     .order-shop {
