@@ -132,6 +132,8 @@
 
     .order-shop {
         padding: 0 0px;
+        height: 61vh;
+
     }
 
     .shop-img {
@@ -143,7 +145,7 @@
 
 
     .order-shop {
-        margin: 0 -5px;
+        margin: 0 0px;
         height: 110vh;
 
     }
@@ -172,7 +174,7 @@
     }
 
     .shop-text {
-        font-size: 11px;
+        font-size: 7px;
     }
 
     .shop-clickable-icon-catr {
@@ -182,11 +184,12 @@
 
     .shop-icon-shop-catr {
         background-size: 15px 15px;
-        background-position: 180px center;
+        background-position: 130px center;
     }
 
     .order-shop {
         margin: 0 0px;
+        height: 190vh;
 
     }
 

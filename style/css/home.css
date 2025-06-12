@@ -287,6 +287,10 @@ div a {
 
 
 @media (max-width: 1024px) {
+    .container {
+        height: 25vh;
+    }
+
     .nva-footer div {
         width: 835px;
 
@@ -310,10 +314,6 @@ div a {
 }
 
 @media (max-width: 500px) {
-    .container {
-        height: 25vh;
-    }
-
     .order {
         padding: 0 5px;
     }
