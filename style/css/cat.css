@@ -1,0 +1,479 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #F3B1FF;
+    padding-bottom: 10vh;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    position: relative;
+    width: 100%;
+}
+
+.content div h1 {
+    font-size: 50px;
+}
+
+.container {
+    height: 17vh;
+}
+
+.header-logo-absolute {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.header-logo-absolute:hover {
+    background-color: #f5f5f5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-50%) scale(1.05);
+}
+
+.header-logo-absolute:active {
+    background-color: #e9e9e9;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    transform: translateY(-50%) scale(0.98);
+}
+
+.header-logo-absolute img {
+    height: 22px;
+    width: auto;
+    display: block;
+}
+
+
+div a {
+    color: #000;
+    text-decoration: none;
+}
+
+
+
+.nva-footer {
+    width: 100%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+}
+
+.nva-footer div {
+    width: 670px;
+    background-color: white;
+    font-family: "Noto Sans Lao";
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 7vh;
+    border-radius: 10px;
+}
+
+.nva-clickable-icon-footer {
+    display: block;
+    background-repeat: no-repeat;
+    text-decoration: none;
+}
+
+.nva-icon-img1 {
+    background-image: url("./icon/icons8-hanger-24.png");
+    background-size: 23px 21px;
+    background-repeat: no-repeat;
+    background-position: center 5px;
+    padding-top: 22px;
+    padding-left: 0;
+    line-height: normal;
+    text-align: center;
+}
+
+.nva-icon-img2 {
+    background-image: url("./icon/icons8-shopping-cart-96.png");
+    background-size: 23px 21px;
+    background-repeat: no-repeat;
+    background-position: center 5px;
+    padding-top: 22px;
+    padding-left: 0;
+    line-height: normal;
+    text-align: center;
+}
+
+.nva-icon-img3 {
+    background-image: url("./icon/icons8-wechat-50.png");
+    background-size: 23px 21px;
+    background-repeat: no-repeat;
+    background-position: center 5px;
+    padding-top: 22px;
+    padding-left: 0;
+    line-height: normal;
+    text-align: center;
+}
+
+.nva-icon-img4 {
+    background-image: url("./icon/icons8-male-user-24.png");
+    background-size: 23px 21px;
+    background-repeat: no-repeat;
+    background-position: center 5px;
+    padding-top: 22px;
+    padding-left: 0;
+    line-height: normal;
+    text-align: center;
+}
+
+.container {
+    width: 466px;
+    height: 683px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    border-radius: 10px;
+    overflow: auto;
+}
+
+.container1 {
+    width: 520px;
+    height: 780px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    border-radius: 10px;
+    overflow: auto;
+}
+
+
+.text a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    height: 44px;
+    border: #000 2px solid;
+    font-family: "Noto Sans Lao";
+    margin-top: 23px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+
+}
+
+.nva-clickable-icon {
+    display: block;
+    background-repeat: no-repeat;
+    text-decoration: none;
+}
+
+.nva-icon-cat {
+    background-image: url("./icon/icons8-shopping-cart-96 (1).png");
+    background-size: 50px 50px;
+    padding-left: 57px;
+    background-position: left 0px center;
+    line-height: 21px;
+}
+
+
+.charset {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 17px;
+    width: 279px;
+    height: 413px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    border: #000 2px solid;
+
+}
+
+
+.charset-container {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 15px;
+    width: 95%;
+    min-height: 80px;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: #000 2px solid;
+}
+
+/* ปรับปรุง .shop-img ที่ใช้ภายใน .charset-container */
+.charset-container .shop-img {
+    width: 80px;
+    /* กำหนดขนาดรูปภาพสินค้าให้ชัดเจน */
+    height: 80px;
+    flex-shrink: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    display: block;
+}
+
+.shop-clickable-icon-catr {
+    width: auto;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    padding: 5px 30px 5px 10px;
+    text-decoration: none;
+    color: inherit;
+    line-height: 1.3;
+    display: block;
+    margin: 5px auto 0;
+    position: relative;
+}
+
+.item-details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+    min-height: 80px;
+}
+
+.charset-text {
+    flex-grow: 1;
+    min-width: 0;
+    /* สำคัญมากสำหรับ flex item ที่มีข้อความ เพื่อให้สามารถหดและตัดคำได้ถูกต้อง */
+    margin-right: 8px;
+    /* เพิ่มระยะห่างเล็กน้อยทางด้านขวา ก่อนถึงส่วนควบคุมจำนวน */
+}
+
+.shop-img {
+    background-image: url("../man/54bb7d855a666d2e4123e1bca09c5cf94412aa9c.jpg");
+    background-size: cover;
+}
+
+.shop-img1 {
+    background-image: url("../man/f20479c54e073be2d778df157aae7c68441c53ee.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 86px;
+    height: 99px;
+}
+
+.shop-img2 {
+    background-image: url("../man/dba81a7760452912f173eacdc27ce33e6f7977c3\ \(1\).jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 86px;
+    height: 99px;
+}
+
+.charset-text p {
+    font-family: "Noto Sans Lao";
+    margin: 0 0 4px 0;
+    font-size: 0.9em;
+    line-height: 1.3;
+    color: #333;
+}
+
+.charset-text p:last-child {
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+.charset-text1 {
+    margin-top: 0;
+    flex-shrink: 0;
+}
+
+.charset-text1>samp {
+    display: inline-flex;
+    align-items: stretch;
+    border-radius: 4px;
+    overflow: hidden;
+    /* ตัดส่วนเกินเมื่อมี border-radius */
+    font-weight: bold;
+    color: #333;
+    user-select: none;
+    /* ป้องกันการเลือกข้อความ */
+    line-height: 1.4;
+}
+
+.charset-text1>samp {
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+.charset-text1>samp>p {
+    padding: 6px 10px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: default;
+}
+
+.charset-text1>samp>samp {
+    padding: 6px 12px;
+
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-box {
+    margin-top: 25px;
+    padding: 15px 20px;
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-bottom: 46px;
+}
+
+.container-box:hover {
+    background-color: #f9f9f9;
+}
+
+.container-box p {
+    margin: 0;
+    font-family: "Noto Sans Lao", sans-serif;
+    font-size: 1em;
+    color: #333;
+    font-weight: 500;
+}
+
+.container-box1 {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #f9f9f9;
+    border-top: 2px solid #000000;
+    border: 2px solid #000000;
+    font-family: "Noto Sans Lao", sans-serif;
+    gap: 112px;
+    border-radius: 10px;
+}
+
+
+.container-box1 input[type="checkbox"] {
+    width: 31px;
+    height: 36px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.summary-details {
+    /* สไตล์สำหรับ div ที่เพิ่มเข้ามาใหม่ */
+    display: flex;
+    flex-direction: column;
+    /* จัดเรียง p ภายในเป็นแนวตั้ง */
+    gap: 4px;
+    flex-grow: 1;
+    /* ทำให้ส่วนนี้ขยายเพื่อดันปุ่มไปทางขวา (ถ้าจำเป็น) */
+}
+
+
+.container-box1 p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #333;
+}
+
+.container-box1 .summary-details p:nth-of-type(1) {
+    font-weight: bold;
+}
+
+.container-box1 button {
+    margin-left: auto;
+    padding: 10px 20px;
+    background-color: #F3B1FF;
+    color: #000000;
+    border: 1px solid #d380e3;
+    border-radius: 6px;
+    font-family: "Noto Sans Lao", sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+    flex-shrink: 0;
+}
+
+.container-box1 button:hover {
+    background-color: #e5a0f0;
+    border-color: #c070d0;
+}
+
+@media (max-width: 1300px) {
+    .nva-footer div {
+        width: 1200px;
+
+    }
+}
+
+
+@media (max-width: 1100px) {
+    .nva-footer div {
+        width: 1057px;
+
+    }
+}
+
+
+@media (max-width: 1024px) {
+
+
+    .nva-footer div {
+        width: 835px;
+
+    }
+
+}
+
+@media (max-width: 550px) {}
+
+@media (max-width: 500px) {}
+
+@media (max-width: 550px) {
+    .content div h1 {
+        font-size: 28px;
+    }
+
+    .header-logo-absolute {
+        left: 10px;
+        width: 36px;
+        height: 36px;
+    }
+
+    .header-logo-absolute img {
+        height: 20px;
+    }
+}
