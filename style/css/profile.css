@@ -12,7 +12,7 @@ body {
 .container {
     width: 90%;
     max-width: 466px;
-    min-height: 93vh;
+    min-height: 100vh;
     max-height: 85vh;
     left: 0;
     right: 0;
@@ -24,7 +24,10 @@ body {
 }
 
 .user {
-    width: 270px;
+    width: 38%;
+    max-width: 300px;
+    margin: 0 30px;
+
 }
 
 
@@ -36,7 +39,8 @@ body {
     text-align: center;
     height: 60px;
     font-family: "Noto Sans Lao";
-    margin: 23px 25px 20px 25px;
+    margin: 20px auto;
+    /* ปรับ margin และจัดกึ่งกลาง */
     color: #000;
 
 }
@@ -49,8 +53,10 @@ body {
 
 .nva-icon-user {
     background-image: url("./icon/Screenshot\ 2025-06-14\ 204826.png");
-    background-size: 60px 60px;
-    padding-left: 100px;
+    background-size: 50px 50px;
+    /* ลดขนาดไอคอนเล็กน้อย */
+    padding-left: 65px;
+    /* ลด padding ลง */
     background-position: left 6px center;
     line-height: 21px;
 }
@@ -161,17 +167,93 @@ body {
         /* ปรับความสูงขั้นต่ำสำหรับจอเล็ก */
     }
 
+    .user {
+        width: 100%;
+        /* ให้เต็มความกว้างของ parent บนจอเล็ก */
+    }
 
     .text1 a {
-
         margin: 0 auto;
+        font-size: 14px;
+        /* ลดขนาด font */
+        width: 90%;
+        /* ปรับความกว้าง */
+        max-width: 260px;
+        /* ปรับ max-width */
+        height: 40px;
+        /* ลดความสูง */
+    }
+
+    .text a {
+        font-size: 14px;
+        /* ลดขนาด font */
+        margin: 15px 15px 10px 15px;
+        /* ลด margin */
+        height: 40px;
+        /* ลดความสูง */
     }
 
     .nva-icon-cat,
     .nva-icon-admin,
     .nva-icon-admin1,
     .nva-icon-admin2,
-    .nva-icon-admin3 {
+    .nva-icon-admin3,
+    .nva-icon-admin4,
+    .nva-icon-admin5,
+    .nva-icon-admin6,
+    .nva-icon-admin7,
+    .nva-icon-admin8,
+    .nva-icon-admin10 {
+        padding-left: 30px;
+        /* เพิ่มระยะห่างระหว่างไอคอนกับข้อความ */
+        background-position: left 10px center;
+        /* ปรับตำแหน่งไอคอนให้เหมาะสม */
+    }
+}
+
+@media (max-width: 450px) {
+
+    /* เพิ่ม breakpoint สำหรับจอเล็กมากๆ เช่น 300px */
+    .container {
+        min-height: 65vh;
+        padding: 10px;
+    }
+
+
+    .nva-icon-user {
+        background-size: 35px 35px;
+        /* ลดขนาดไอคอน user */
+        padding-left: 45px;
+        /* ลด padding user icon */
+        background-position: left 5px center;
+    }
+
+    .text a,
+    .text1 a {
+        font-size: 12px;
+        /* ลดขนาด font ของ text และ text1 */
+        height: 36px;
+        /* ลดความสูง */
+    }
+
+    .text1 a {
+        max-width: 220px;
+    }
+
+    .nva-icon-user {
+        background-position: left -3px center;
+    }
+
+    .nva-icon-admin,
+    .nva-icon-admin1,
+    .nva-icon-admin2,
+    .nva-icon-admin3,
+    .nva-icon-admin4,
+    .nva-icon-admin5,
+    .nva-icon-admin6,
+    .nva-icon-admin7,
+    .nva-icon-admin8,
+    .nva-icon-admin10 {
         padding-left: 30px;
         /* เพิ่มระยะห่างระหว่างไอคอนกับข้อความ */
         background-position: left 10px center;
@@ -184,6 +266,7 @@ body {
     background-image: url("./icon/Screenshot\ 2025-06-14\ 210909.png");
     background-size: 15px 15px;
     padding-left: 92px;
+    /* จะถูก override ด้วย media query ด้านบนสำหรับจอเล็ก */
     background-position: left 6px center;
     line-height: 21px;
 }
@@ -192,6 +275,7 @@ body {
     background-image: url("./icon/Screenshot\ 2025-06-14\ 211220.png");
     background-size: 15px 15px;
     padding-left: 92px;
+    /* จะถูก override */
     background-position: left 6px center;
     line-height: 21px;
 }
@@ -200,6 +284,7 @@ body {
     background-image: url("./icon/Screenshot\ 2025-06-14\ 211458.png");
     background-size: 15px 15px;
     padding-left: 92px;
+    /* จะถูก override */
     background-position: left 6px center;
     line-height: 21px;
 }
@@ -208,6 +293,7 @@ body {
     background-image: url("./icon/Screenshot\ 2025-06-14\ 211717.png");
     background-size: 15px 15px;
     padding-left: 92px;
+    /* จะถูก override */
     background-position: left 6px center;
     line-height: 21px;
 }
@@ -216,6 +302,7 @@ body {
     background-image: url("./icon/Screenshot\ 2025-06-14\ 204826.png");
     background-size: 15px 15px;
     padding-left: 92px;
+    /* จะถูก override */
     background-position: left 6px center;
     line-height: 21px;
 }
@@ -224,6 +311,7 @@ body {
     background-image: url("./icon/Screenshot\ 2025-06-14\ 212212.png");
     background-size: 15px 15px;
     padding-left: 92px;
+    /* จะถูก override */
     background-position: left 6px center;
     line-height: 21px;
 }
@@ -232,6 +320,7 @@ body {
     background-image: url("./icon/Screenshot\ 2025-06-14\ 212303.png");
     background-size: 15px 15px;
     padding-left: 92px;
+    /* จะถูก override */
     background-position: left 6px center;
     line-height: 21px;
 }
@@ -240,6 +329,7 @@ body {
     background-image: url("./icon/Screenshot\ 2025-06-14\ 212050.png");
     background-size: 15px 15px;
     padding-left: 92px;
+    /* จะถูก override */
     background-position: left 6px center;
     line-height: 21px;
 }
