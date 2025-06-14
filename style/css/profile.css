@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #F3B1FF;
+    padding-bottom: 10vh;
+}
+
+
+.container {
+    width: 90%;
+    max-width: 466px;
+    min-height: 93vh;
+    max-height: 85vh;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    border-radius: 10px;
+    overflow-y: auto;
+}
+
+.user {
+    width: 270px;
+}
+
+
+.user a {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    height: 60px;
+    font-family: "Noto Sans Lao";
+    margin: 23px 25px 20px 25px;
+    color: #000;
+
+}
+
+.nva-clickable-user {
+    display: block;
+    background-repeat: no-repeat;
+    text-decoration: none;
+}
+
+.nva-icon-user {
+    background-image: url("./icon/Screenshot\ 2025-06-14\ 204826.png");
+    background-size: 60px 60px;
+    padding-left: 100px;
+    background-position: left 6px center;
+    line-height: 21px;
+}
+
+
+
+
+.text a {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    height: 44px;
+    font-family: "Noto Sans Lao";
+    margin: 23px 25px 20px 25px;
+    color: #000;
+
+}
+
+.nva-clickable-icon {
+    display: block;
+    background-repeat: no-repeat;
+    text-decoration: none;
+}
+
+.nva-icon-cat {
+    background-image: url("./icon/icons8-left-24.png");
+    background-size: 15px 15px;
+    padding-left: 25px;
+    background-position: left 6px center;
+    line-height: 21px;
+}
+
+
+.text1 a {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+
+    height: 44px;
+    font-family: "Noto Sans Lao";
+    border-radius: 15px;
+    margin: 20px auto;
+    /* ปรับ margin ให้ยืดหยุ่นและจัดกึ่งกลาง */
+    width: 80%;
+    /* ทำให้ความกว้างยืดหยุ่น */
+    max-width: 286px;
+    color: #000;
+    /* กำหนดความกว้างสูงสุด */
+
+}
+
+.nva-clickable-icon1 {
+    display: block;
+    background-repeat: no-repeat;
+    text-decoration: none;
+}
+
+.nva-icon-admin {
+    background-image: url("./icon/icons8-outgoing-call-24.png");
+    background-size: 15px 15px;
+    padding-left: 25px;
+    background-position: left 6px center;
+    line-height: 21px;
+}
+
+
+
+@media (max-width: 1300px) {
+    .nva-footer div {
+        width: 1200px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .nva-footer div {
+        width: 1057px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .nva-footer div {
+        width: 835px;
+    }
+}
+
+@media (max-width: 550px) {
+
+    /* หรือ 500px ตามที่ใช้ในไฟล์อื่น */
+    .content div h1 {
+        font-size: 28px;
+    }
+
+    .header-logo-absolute {
+        left: 10px;
+        width: 36px;
+        height: 36px;
+    }
+
+    .header-logo-absolute img {
+        height: 20px;
+    }
+
+    .container {
+        min-height: 70vh;
+        /* ปรับความสูงขั้นต่ำสำหรับจอเล็ก */
+    }
+
+
+    .text1 a {
+
+        margin: 0 auto;
+    }
+
+    .nva-icon-cat,
+    .nva-icon-admin,
+    .nva-icon-admin1,
+    .nva-icon-admin2,
+    .nva-icon-admin3 {
+        padding-left: 30px;
+        /* เพิ่มระยะห่างระหว่างไอคอนกับข้อความ */
+        background-position: left 10px center;
+        /* ปรับตำแหน่งไอคอนให้เหมาะสม */
+    }
+}
+
+
+.nva-icon-admin2 {
+    background-image: url("./icon/Screenshot\ 2025-06-14\ 210909.png");
+    background-size: 15px 15px;
+    padding-left: 92px;
+    background-position: left 6px center;
+    line-height: 21px;
+}
+
+.nva-icon-admin3 {
+    background-image: url("./icon/Screenshot\ 2025-06-14\ 211220.png");
+    background-size: 15px 15px;
+    padding-left: 92px;
+    background-position: left 6px center;
+    line-height: 21px;
+}
+
+.nva-icon-admin4 {
+    background-image: url("./icon/Screenshot\ 2025-06-14\ 211458.png");
+    background-size: 15px 15px;
+    padding-left: 92px;
+    background-position: left 6px center;
+    line-height: 21px;
+}
+
+.nva-icon-admin5 {
+    background-image: url("./icon/Screenshot\ 2025-06-14\ 211717.png");
+    background-size: 15px 15px;
+    padding-left: 92px;
+    background-position: left 6px center;
+    line-height: 21px;
+}
+
+.nva-icon-admin6 {
+    background-image: url("./icon/Screenshot\ 2025-06-14\ 204826.png");
+    background-size: 15px 15px;
+    padding-left: 92px;
+    background-position: left 6px center;
+    line-height: 21px;
+}
+
+.nva-icon-admin7 {
+    background-image: url("./icon/Screenshot\ 2025-06-14\ 212212.png");
+    background-size: 15px 15px;
+    padding-left: 92px;
+    background-position: left 6px center;
+    line-height: 21px;
+}
+
+.nva-icon-admin8 {
+    background-image: url("./icon/Screenshot\ 2025-06-14\ 212303.png");
+    background-size: 15px 15px;
+    padding-left: 92px;
+    background-position: left 6px center;
+    line-height: 21px;
+}
+
+.nva-icon-admin10 {
+    background-image: url("./icon/Screenshot\ 2025-06-14\ 212050.png");
+    background-size: 15px 15px;
+    padding-left: 92px;
+    background-position: left 6px center;
+    line-height: 21px;
+}
