@@ -144,7 +144,7 @@ div a {
 .container {
     width: 90%;
     max-width: 466px;
-    min-height: 71vh;
+    min-height: 44vh;
     max-height: 85vh;
     left: 0;
     right: 0;
@@ -172,18 +172,17 @@ div a {
 
 .text a {
     display: flex;
-    justify-content: center;
     align-items: center;
-    width: 100px;
-    font-size: 30px;
+    font-size: 16px;
+    /* ปรับขนาด font เริ่มต้นเล็กน้อย */
     font-weight: bold;
     text-align: center;
     height: 44px;
     border: #000 2px solid;
     font-family: "Noto Sans Lao";
-    margin-top: 23px;
-    margin-left: 10px;
-    margin-bottom: 20px;
+    margin: 23px 25px 20px 25px;
+    /* รวม margin */
+    border-radius: 15px;
 
 }
 
@@ -194,8 +193,8 @@ div a {
 }
 
 .nva-icon-cat {
-    background-image: url("./icon/icons8-shopping-cart-96 (1).png");
-    background-size: 50px 50px;
+    background-image: url("./icon/icons8-left-24.png");
+    background-size: 15px 15px;
     padding-left: 57px;
     background-position: left 0px center;
     line-height: 21px;
@@ -206,9 +205,14 @@ div a {
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 17px;
-    width: 279px;
-    height: 413px;
+    gap: 15px;
+    /* ลด gap เล็กน้อย */
+    width: 90%;
+    /* ทำให้ยืดหยุ่น */
+    max-width: 350px;
+    /* กำหนดความกว้างสูงสุด */
+    min-height: 300px;
+    /* กำหนดความสูงขั้นต่ำ ให้เนื้อหากำหนดความสูงจริง */
     margin-left: auto;
     margin-right: auto;
     background-color: rgb(255, 255, 255);
@@ -355,6 +359,8 @@ div a {
     cursor: pointer;
     transition: background-color 0.2s ease;
     margin-bottom: 46px;
+    margin-left: 25px;
+    margin-right: 25px;
 }
 
 .container-box:hover {
@@ -377,8 +383,11 @@ div a {
     border-top: 2px solid #000000;
     border: 2px solid #000000;
     font-family: "Noto Sans Lao", sans-serif;
-    gap: 112px;
+    gap: 20px;
+    /* ลด gap เริ่มต้น */
     border-radius: 10px;
+    margin-left: 25px;
+    margin-right: 25px;
 }
 
 
@@ -460,10 +469,16 @@ div a {
 
     .container-box {
         width: 86%;
+        margin-left: auto;
+        /* จัดกึ่งกลางเมื่อ width ไม่เต็ม */
+        margin-right: auto;
     }
 
     .container-box1 {
         width: 86%;
+        margin-left: auto;
+        /* จัดกึ่งกลาง */
+        margin-right: auto;
         gap: 20px;
         flex-wrap: wrap;
     }
@@ -492,9 +507,15 @@ div a {
     }
 
     .container {
-        min-height: 65vh;
+        min-height: 44vh;
         max-height: 80vh;
         padding: 10px;
+    }
+
+    .text a {
+        font-size: 14px;
+        margin-left: 15px;
+        margin-right: 15px;
     }
 
     .nva-footer div {
@@ -517,9 +538,12 @@ div a {
 
 
     .charset {
-        width: 95%;
+        width: 90%;
+        /* ปรับให้สอดคล้องกับ container อื่นๆ */
         gap: 10px;
         padding: 10px;
+        min-height: auto;
+        /* ให้ความสูงปรับตามเนื้อหา */
     }
 
     .charset-container {
@@ -547,13 +571,36 @@ div a {
 
     .container-box {
         width: 86%;
+        margin-left: auto;
+        margin-right: auto;
         padding: 10px 15px;
         font-size: 0.9em;
     }
 
     .container-box1 {
+        width: 86%;
+        /* อาจซ้ำกับ 550px แต่ใส่ไว้เพื่อความชัดเจน */
+        margin-left: auto;
+        margin-right: auto;
         gap: 10px;
         padding: 10px 12px;
         font-size: 0.85em;
     }
+
+    .container1 {
+        width: 90%;
+        max-width: 520px;
+        min-height: 70vh;
+        max-height: 90vh;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: white;
+        border-radius: 10px;
+        overflow-y: auto;
+        /* แก้ไขจาก none เป็น auto */
+    }
+
+
 }
