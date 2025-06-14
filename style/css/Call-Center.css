@@ -1,0 +1,311 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #F3B1FF;
+    padding-bottom: 10vh;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    position: relative;
+    width: 100%;
+}
+
+.content div h1 {
+    font-size: 50px;
+}
+
+.container {
+    height: 17vh;
+}
+
+.header-logo-absolute {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.header-logo-absolute:hover {
+    background-color: #f5f5f5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-50%) scale(1.05);
+}
+
+.header-logo-absolute:active {
+    background-color: #e9e9e9;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    transform: translateY(-50%) scale(0.98);
+}
+
+.header-logo-absolute img {
+    height: 22px;
+    width: auto;
+    display: block;
+}
+
+
+div a {
+    color: #000;
+    text-decoration: none;
+}
+
+
+
+.nva-footer {
+    width: 100%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+}
+
+.nva-footer div {
+    width: 670px;
+    background-color: white;
+    font-family: "Noto Sans Lao";
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 7vh;
+    border-radius: 10px;
+}
+
+.nva-clickable-icon-footer {
+    display: block;
+    background-repeat: no-repeat;
+    text-decoration: none;
+}
+
+.nva-icon-img1 {
+    background-image: url("./icon/icons8-hanger-24.png");
+    background-size: 23px 21px;
+    background-repeat: no-repeat;
+    background-position: center 5px;
+    padding-top: 22px;
+    padding-left: 0;
+    line-height: normal;
+    text-align: center;
+}
+
+.nva-icon-img2 {
+    background-image: url("./icon/icons8-shopping-cart-96.png");
+    background-size: 23px 21px;
+    background-repeat: no-repeat;
+    background-position: center 5px;
+    padding-top: 22px;
+    padding-left: 0;
+    line-height: normal;
+    text-align: center;
+}
+
+.nva-icon-img3 {
+    background-image: url("./icon/icons8-wechat-50.png");
+    background-size: 23px 21px;
+    background-repeat: no-repeat;
+    background-position: center 5px;
+    padding-top: 22px;
+    padding-left: 0;
+    line-height: normal;
+    text-align: center;
+}
+
+.nva-icon-img4 {
+    background-image: url("./icon/icons8-male-user-24.png");
+    background-size: 23px 21px;
+    background-repeat: no-repeat;
+    background-position: center 5px;
+    padding-top: 22px;
+    padding-left: 0;
+    line-height: normal;
+    text-align: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 466px;
+    /* คง max-width เดิม หรือปรับตามความเหมาะสม */
+    /* min-height: 80vh; */
+    /* อาจไม่จำเป็นต้องสูงขนาดนี้ ให้เนื้อหากำหนด */
+    min-height: 80vh;
+    max-height: 85vh;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    border-radius: 10px;
+    overflow-y: auto;
+}
+
+
+
+.text a {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    height: 44px;
+    font-family: "Noto Sans Lao";
+    margin: 23px 25px 20px 25px;
+    /* สามารถใช้ margin: 20px auto; เพื่อจัดกึ่งกลางถ้าต้องการ */
+    /* border: #000 2px solid; */
+    /* ถ้าไม่ต้องการเส้นขอบ เอาออกได้ */
+
+
+}
+
+.nva-clickable-icon {
+    display: block;
+    background-repeat: no-repeat;
+    text-decoration: none;
+}
+
+.nva-icon-cat {
+    background-image: url("./icon/icons8-left-24.png");
+    background-size: 15px 15px;
+    padding-left: 25px;
+    background-position: left 6px center;
+    line-height: 21px;
+}
+
+
+.text1 a {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    justify-content: center;
+    height: 44px;
+    border: #000 2px solid;
+    font-family: "Noto Sans Lao";
+    border-radius: 15px;
+    margin: 20px auto;
+    /* ปรับ margin ให้ยืดหยุ่นและจัดกึ่งกลาง */
+    width: 80%;
+    /* ทำให้ความกว้างยืดหยุ่น */
+    max-width: 250px;
+    /* กำหนดความกว้างสูงสุด */
+
+}
+
+.nva-clickable-icon1 {
+    display: block;
+    background-repeat: no-repeat;
+    text-decoration: none;
+}
+
+.nva-icon-admin {
+    background-image: url("./icon/icons8-outgoing-call-24.png");
+    background-size: 15px 15px;
+    padding-left: 25px;
+    background-position: left 6px center;
+    line-height: 21px;
+}
+
+/* Media Queries for responsiveness */
+
+@media (max-width: 1300px) {
+    .nva-footer div {
+        width: 1200px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .nva-footer div {
+        width: 1057px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .nva-footer div {
+        width: 835px;
+    }
+}
+
+@media (max-width: 550px) {
+
+    /* หรือ 500px ตามที่ใช้ในไฟล์อื่น */
+    .content div h1 {
+        font-size: 28px;
+    }
+
+    .header-logo-absolute {
+        left: 10px;
+        width: 36px;
+        height: 36px;
+    }
+
+    .header-logo-absolute img {
+        height: 20px;
+    }
+
+    .container {
+        min-height: 70vh;
+        /* ปรับความสูงขั้นต่ำสำหรับจอเล็ก */
+    }
+
+
+    .text1 a {
+        padding-left: 15px;
+        /* เพิ่ม padding หากข้อความชิดขอบซ้าย */
+        padding-right: 15px;
+    }
+
+    .nva-icon-cat,
+    .nva-icon-admin,
+    .nva-icon-admin1,
+    .nva-icon-admin2,
+    .nva-icon-admin3 {
+        padding-left: 30px;
+        /* เพิ่มระยะห่างระหว่างไอคอนกับข้อความ */
+        background-position: left 10px center;
+        /* ปรับตำแหน่งไอคอนให้เหมาะสม */
+    }
+}
+
+
+.nva-icon-admin1 {
+    background-image: url("./icon/icons8-outgoing-call-24.png");
+    background-size: 15px 15px;
+    padding-left: 25px;
+    background-position: left 6px center;
+    line-height: 21px;
+}
+
+.nva-icon-admin2 {
+    background-image: url("./icon/Screenshot\ 2025-06-14\ 201331.png");
+    background-size: 15px 15px;
+    padding-left: 25px;
+    background-position: left 6px center;
+    line-height: 21px;
+}
+
+.nva-icon-admin3 {
+    background-image: url("./icon/Screenshot\ 2025-06-14\ 201827.png");
+    background-size: 15px 15px;
+    padding-left: 25px;
+    background-position: left 6px center;
+    line-height: 21px;
+}
