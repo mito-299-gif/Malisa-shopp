@@ -142,27 +142,45 @@ div a {
 }
 
 .container {
-    width: 466px;
-    height: 683px;
+    width: 90%;
+    /* ปรับความกว้างให้ยืดหยุ่น */
+    max-width: 466px;
+    /* กำหนดความกว้างสูงสุดเท่าเดิม */
+    /* height: 683px; */
+    /* หลีกเลี่ยงความสูงตายตัว */
+    min-height: 71vh;
+    /* กำหนดความสูงขั้นต่ำอ้างอิงกับ viewport */
+    max-height: 85vh;
+    /* กำหนดความสูงสูงสุด ป้องกันสูงเกินหน้าจอ */
     left: 0;
     right: 0;
     margin-left: auto;
     margin-right: auto;
     background-color: white;
     border-radius: 10px;
-    overflow: auto;
+    overflow-y: auto;
+    /* ให้ scroll เฉพาะแนวตั้งเมื่อเนื้อหาเกิน */
 }
 
 .container1 {
-    width: 520px;
-    height: 780px;
+    width: 90%;
+    /* ปรับความกว้างให้ยืดหยุ่น */
+    max-width: 520px;
+    /* กำหนดความกว้างสูงสุดเท่าเดิม */
+    /* height: 780px; */
+    /* หลีกเลี่ยงความสูงตายตัว */
+    min-height: 70vh;
+    /* กำหนดความสูงขั้นต่ำอ้างอิงกับ viewport */
+    max-height: 90vh;
+    /* กำหนดความสูงสูงสุด ป้องกันสูงเกินหน้าจอ */
     left: 0;
     right: 0;
     margin-left: auto;
     margin-right: auto;
     background-color: white;
     border-radius: 10px;
-    overflow: auto;
+    overflow-y: auto;
+    /* ให้ scroll เฉพาะแนวตั้งเมื่อเนื้อหาเกิน */
 }
 
 
@@ -458,9 +476,33 @@ div a {
 
 }
 
-@media (max-width: 550px) {}
+@media (max-width: 500px) {
+    .charset-container {
+        width: 90%;
+    }
 
-@media (max-width: 500px) {}
+    .container-box {
+        width: 86%;
+    }
+
+    .container-box1 {
+        width: 86%;
+        gap: 20px;
+        /* ลดช่องว่างสำหรับจอเล็ก */
+        flex-wrap: wrap;
+        /* อนุญาตให้ตัดบรรทัดเมื่อพื้นที่ไม่พอ */
+    }
+
+    .container1 {
+        /* width (90% และ max-width: 520px จากสไตล์หลัก) จะยังคงมีผล */
+        /* height: 787px; */
+        /* ลบความสูงที่เป็นค่าตายตัวนี้ออก */
+        /* max-height ที่กำหนดในสไตล์หลัก (เช่น 90vh) จะมีผลที่นี่
+           หรือถ้าต้องการค่าเฉพาะสำหรับหน้าจอ <500px สามารถกำหนดใหม่ได้ เช่น: */
+        /* max-height: 85vh; */
+        /* คุณสมบัติอื่นๆ เช่น left, right, margin, background, border-radius, overflow ส่วนใหญ่ยังใช้ได้ */
+    }
+}
 
 @media (max-width: 550px) {
     .content div h1 {
@@ -478,45 +520,19 @@ div a {
     }
 }
 
-@media (max-width: 500px) {
-    body {
-        padding-bottom: 15vh;
-        /* เพิ่ม padding ด้านล่างเผื่อ footer ที่อาจจะสูงขึ้น */
-    }
-
+@media (max-width: 400px) {
     .content div h1 {
-        font-size: 24px;
-        /* ลดขนาด font ของ header */
-    }
-
-    .container,
-    .container1 {
-        width: 95%;
-        /* ปรับ width เป็น % เพื่อให้ยืดหยุ่น */
-        height: auto;
-        /* ปรับ height เป็น auto หรือ % ตามความเหมาะสม */
-        margin-left: auto;
-        margin-right: auto;
-        padding: 10px;
-        /* เพิ่ม padding ภายใน container */
+        font-size: 22px;
+        /* ลดขนาดตัวอักษรหัวข้อหลัก */
     }
 
     .nva-footer div {
-        width: 100%;
-        /* ให้ footer เต็มความกว้าง */
+        width: 95%;
+        /* ทำให้ footer ยืดหยุ่นเต็มความกว้างมากขึ้น */
         height: auto;
-        /* ปรับ height ของ footer items */
-        padding: 5px 0;
-        /* ลด padding ของ footer */
-        border-radius: 10px 10px 0 0;
-        /* อาจจะปรับ border-radius ให้สวยงาม */
-    }
-
-    .nva-footer div a {
-        /* ปรับขนาด font และ padding ของ icon ใน footer */
-        font-size: 0.8em;
-        padding-top: 18px;
-        /* ปรับ padding ให้ icon ไม่ชิดขอบบน */
+        /* ปรับความสูงตามเนื้อหาภายใน */
+        padding-top: 5px;
+        padding-bottom: 5px;
     }
 
     .nva-icon-img1,
@@ -524,61 +540,32 @@ div a {
     .nva-icon-img3,
     .nva-icon-img4 {
         background-size: 20px 18px;
-        /* ลดขนาด icon เล็กน้อย */
-        background-position: center 3px;
+        /* ลดขนาดไอคอนเล็กน้อย */
+        background-position: center 4px;
+        /* ปรับตำแหน่งไอคอน */
         padding-top: 20px;
+        /* ปรับระยะห่างให้ข้อความใต้ไอคอนไม่ทับซ้อน */
+        font-size: 10px;
+        /* ลดขนาดตัวอักษรใต้ไอคอน */
+        line-height: 1.2;
+        /* ปรับความสูงบรรทัดของข้อความใต้ไอคอน */
     }
 
     .text a {
-        width: 80px;
-        /* ลดขนาดปุ่ม */
-        font-size: 22px;
-        /* ลดขนาด font */
-        height: 38px;
-        margin-top: 15px;
-        margin-bottom: 15px;
-    }
-
-    .charset {
-        width: 90%;
-        /* ปรับ width ของ charset container */
-        gap: 10px;
-        /* ลด gap */
-    }
-
-    .charset-container {
-        width: 100%;
-        /* ให้ charset-container เต็มความกว้างของ parent */
-        padding: 8px;
-        gap: 10px;
+        /* ปุ่ม "หมวดหมู่" หรือคล้ายกัน */
+        font-size: 18px;
+        /* ลดขนาดตัวอักษรในปุ่ม */
+        width: auto;
+        /* ให้ความกว้างปรับตามเนื้อหา */
+        padding: 8px 12px;
+        /* ปรับ padding ของปุ่ม */
     }
 
     .container-box1 {
+        /* ส่วนสรุปรายการสินค้า */
         gap: 10px;
-        /* ลด gap ใน container-box1 */
-        padding: 10px;
-        flex-direction: column;
-        /* อาจจะต้องเปลี่ยนเป็น column ถ้า content เยอะ */
-        align-items: stretch;
-    }
-
-    .container-box1 button {
-        margin-left: 0;
-        /* ให้ปุ่มเต็มความกว้าง หรือจัดกลาง */
-        width: 100%;
-        margin-top: 10px;
-    }
-
-    .item-details {
-        flex-direction: column;
-        /* ปรับ item-details เป็น column */
-        align-items: flex-start;
-    }
-
-    .charset-text1 {
-        margin-top: 10px;
-        /* เพิ่ม margin ด้านบนสำหรับส่วนควบคุมจำนวน */
-        align-self: center;
-        /* จัดให้อยู่กลาง */
+        /* ลดช่องว่างระหว่าง element ให้น้อยลงอีก */
+        padding: 10px 12px;
+        /* ปรับ padding ภายใน */
     }
 }
