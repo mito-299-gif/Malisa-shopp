@@ -476,7 +476,7 @@ div a {
 
 }
 
-@media (max-width: 500px) {
+@media (max-width: 550px) {
     .charset-container {
         width: 90%;
     }
@@ -520,10 +520,19 @@ div a {
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
     .content div h1 {
         font-size: 22px;
         /* ลดขนาดตัวอักษรหัวข้อหลัก */
+    }
+
+    .container {
+        min-height: 65vh;
+        /* ปรับความสูงขั้นต่ำของ container หลัก */
+        max-height: 80vh;
+        /* ปรับความสูงสูงสุดของ container หลัก */
+        padding: 10px;
+        /* เพิ่ม padding ภายใน container หลัก */
     }
 
     .nva-footer div {
@@ -545,20 +554,54 @@ div a {
         /* ปรับตำแหน่งไอคอน */
         padding-top: 20px;
         /* ปรับระยะห่างให้ข้อความใต้ไอคอนไม่ทับซ้อน */
-        font-size: 10px;
+        font-size: 17px;
         /* ลดขนาดตัวอักษรใต้ไอคอน */
         line-height: 1.2;
         /* ปรับความสูงบรรทัดของข้อความใต้ไอคอน */
     }
 
-    .text a {
-        /* ปุ่ม "หมวดหมู่" หรือคล้ายกัน */
-        font-size: 18px;
+
+    .charset {
+        /* กล่องหลักของรายการสินค้า */
+        width: 95%;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .charset-container {
+        /* กล่องแต่ละรายการสินค้า */
+        width: 90%;
+        /* ให้เต็มความกว้างของ parent (.charset) */
+        padding: 8px;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    .charset-container .shop-img {
+        /* รูปในรายการสินค้า */
+        width: 60px;
+        height: 60px;
+    }
+
+    .charset-text p {
+        /* ข้อความในรายการสินค้า */
+        font-size: 0.8em;
+    }
+
+    .charset-text1>samp,
+    .charset-text1>samp>p,
+    .charset-text1>samp>samp {
+        /* ส่วนควบคุมจำนวน */
+        padding: 4px 8px;
+        font-size: 0.9em;
+    }
+
+    .container-box {
+        /* ปุ่ม "สรุปรายการสินค้า" */
+        width: 86%;
+        padding: 10px 15px;
+        font-size: 0.9em;
         /* ลดขนาดตัวอักษรในปุ่ม */
-        width: auto;
-        /* ให้ความกว้างปรับตามเนื้อหา */
-        padding: 8px 12px;
-        /* ปรับ padding ของปุ่ม */
     }
 
     .container-box1 {
@@ -567,5 +610,7 @@ div a {
         /* ลดช่องว่างระหว่าง element ให้น้อยลงอีก */
         padding: 10px 12px;
         /* ปรับ padding ภายใน */
+        font-size: 0.85em;
+        /* ลดขนาดตัวอักษรโดยรวมใน box นี้ */
     }
 }
