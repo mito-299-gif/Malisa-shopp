@@ -477,3 +477,108 @@ div a {
         height: 20px;
     }
 }
+
+@media (max-width: 500px) {
+    body {
+        padding-bottom: 15vh;
+        /* เพิ่ม padding ด้านล่างเผื่อ footer ที่อาจจะสูงขึ้น */
+    }
+
+    .content div h1 {
+        font-size: 24px;
+        /* ลดขนาด font ของ header */
+    }
+
+    .container,
+    .container1 {
+        width: 95%;
+        /* ปรับ width เป็น % เพื่อให้ยืดหยุ่น */
+        height: auto;
+        /* ปรับ height เป็น auto หรือ % ตามความเหมาะสม */
+        margin-left: auto;
+        margin-right: auto;
+        padding: 10px;
+        /* เพิ่ม padding ภายใน container */
+    }
+
+    .nva-footer div {
+        width: 100%;
+        /* ให้ footer เต็มความกว้าง */
+        height: auto;
+        /* ปรับ height ของ footer items */
+        padding: 5px 0;
+        /* ลด padding ของ footer */
+        border-radius: 10px 10px 0 0;
+        /* อาจจะปรับ border-radius ให้สวยงาม */
+    }
+
+    .nva-footer div a {
+        /* ปรับขนาด font และ padding ของ icon ใน footer */
+        font-size: 0.8em;
+        padding-top: 18px;
+        /* ปรับ padding ให้ icon ไม่ชิดขอบบน */
+    }
+
+    .nva-icon-img1,
+    .nva-icon-img2,
+    .nva-icon-img3,
+    .nva-icon-img4 {
+        background-size: 20px 18px;
+        /* ลดขนาด icon เล็กน้อย */
+        background-position: center 3px;
+        padding-top: 20px;
+    }
+
+    .text a {
+        width: 80px;
+        /* ลดขนาดปุ่ม */
+        font-size: 22px;
+        /* ลดขนาด font */
+        height: 38px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .charset {
+        width: 90%;
+        /* ปรับ width ของ charset container */
+        gap: 10px;
+        /* ลด gap */
+    }
+
+    .charset-container {
+        width: 100%;
+        /* ให้ charset-container เต็มความกว้างของ parent */
+        padding: 8px;
+        gap: 10px;
+    }
+
+    .container-box1 {
+        gap: 10px;
+        /* ลด gap ใน container-box1 */
+        padding: 10px;
+        flex-direction: column;
+        /* อาจจะต้องเปลี่ยนเป็น column ถ้า content เยอะ */
+        align-items: stretch;
+    }
+
+    .container-box1 button {
+        margin-left: 0;
+        /* ให้ปุ่มเต็มความกว้าง หรือจัดกลาง */
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .item-details {
+        flex-direction: column;
+        /* ปรับ item-details เป็น column */
+        align-items: flex-start;
+    }
+
+    .charset-text1 {
+        margin-top: 10px;
+        /* เพิ่ม margin ด้านบนสำหรับส่วนควบคุมจำนวน */
+        align-self: center;
+        /* จัดให้อยู่กลาง */
+    }
+}
