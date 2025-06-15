@@ -12,8 +12,9 @@ body {
 .container {
     width: 90%;
     max-width: 466px;
-    min-height: 100vh;
-    max-height: 85vh;
+    /* Consistent max-width */
+    /* min-height: 100vh; conflicts with max-height: 85vh. Removed. */
+    max-height: 100vh;
     left: 0;
     right: 0;
     margin-left: auto;
@@ -21,13 +22,15 @@ body {
     background-color: white;
     border-radius: 10px;
     overflow-y: auto;
+    padding: 15px;
+    /* Added some internal padding */
 }
 
 .user {
-    width: 38%;
     max-width: 300px;
-    margin: 0 30px;
-
+    /* Max width for the user block */
+    margin: 20px auto;
+    /* Center the user block */
 }
 
 
@@ -39,26 +42,36 @@ body {
     text-align: center;
     height: 60px;
     font-family: "Noto Sans Lao";
-    margin: 20px auto;
-    /* ปรับ margin และจัดกึ่งกลาง */
+    /* Consistent font */
     color: #000;
-
+    text-decoration: none;
+    position: relative;
+    /* For ::before pseudo-element */
+    padding-left: 70px;
+    /* Space for icon: 50px icon + 10px gap + 10px padding from edge */
+    box-sizing: border-box;
 }
 
 .nva-clickable-user {
     display: block;
     background-repeat: no-repeat;
     text-decoration: none;
+    /* Styles moved to .user a and .nva-icon-user::before */
 }
 
-.nva-icon-user {
+.nva-icon-user::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    /* Distance from the left edge of the padding box */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
     background-image: url("./icon/Screenshot\ 2025-06-14\ 204826.png");
     background-size: 50px 50px;
-    /* ลดขนาดไอคอนเล็กน้อย */
-    padding-left: 65px;
-    /* ลด padding ลง */
-    background-position: left 6px center;
-    line-height: 21px;
+    /* Explicit size */
+    background-repeat: no-repeat;
 }
 
 
@@ -74,21 +87,34 @@ body {
     font-family: "Noto Sans Lao";
     margin: 23px 25px 20px 25px;
     color: #000;
-
+    text-decoration: none;
+    position: relative;
+    /* For ::before */
+    padding-left: 40px;
+    /* Space for icon: 15px icon + 10px gap + 15px padding from edge */
+    box-sizing: border-box;
 }
 
 .nva-clickable-icon {
     display: block;
     background-repeat: no-repeat;
     text-decoration: none;
+    /* Styles moved to .text a and .nva-icon-cat::before */
 }
 
-.nva-icon-cat {
+.nva-icon-cat::before {
+    content: "";
+    position: absolute;
+    left: 15px;
+    /* Distance from the left edge of the padding box */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
     background-image: url("./icon/icons8-left-24.png");
     background-size: 15px 15px;
-    padding-left: 25px;
-    background-position: left 6px center;
-    line-height: 21px;
+    /* Explicit size */
+    background-repeat: no-repeat;
 }
 
 
@@ -97,32 +123,42 @@ body {
     align-items: center;
     font-size: 16px;
     font-weight: bold;
-
     height: 44px;
     font-family: "Noto Sans Lao";
     border-radius: 15px;
     margin: 20px auto;
-    /* ปรับ margin ให้ยืดหยุ่นและจัดกึ่งกลาง */
+    /* Center links */
     width: 80%;
-    /* ทำให้ความกว้างยืดหยุ่น */
     max-width: 286px;
     color: #000;
-    /* กำหนดความกว้างสูงสุด */
-
+    text-decoration: none;
+    position: relative;
+    /* For ::before */
+    padding-left: 40px;
+    /* Default padding for icon space */
+    box-sizing: border-box;
 }
 
 .nva-clickable-icon1 {
     display: block;
     background-repeat: no-repeat;
     text-decoration: none;
+    /* This class is on the <a> tag. Common styles are in .text1 a. Specific icon styles via .nva-icon-adminX::before */
 }
 
-.nva-icon-admin {
-    background-image: url("./icon/icons8-outgoing-call-24.png");
+/* Common style for ::before pseudo-elements of admin icons */
+.nva-clickable-icon1[class*="nva-icon-admin"]::before {
+    content: "";
+    position: absolute;
+    left: 15px;
+    /* Distance from the left edge of the padding box */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
     background-size: 15px 15px;
-    padding-left: 25px;
-    background-position: left 6px center;
-    line-height: 21px;
+    /* Explicit size */
+    background-repeat: no-repeat;
 }
 
 
@@ -164,12 +200,14 @@ body {
 
     .container {
         min-height: 70vh;
-        /* ปรับความสูงขั้นต่ำสำหรับจอเล็ก */
+        /* Adjust min-height for smaller screens */
     }
 
     .user {
-        width: 100%;
-        /* ให้เต็มความกว้างของ parent บนจอเล็ก */
+        width: 90%;
+        /* Adjust user block width */
+        max-width: none;
+        /* Allow it to be wider if needed */
     }
 
     .text1 a {
@@ -179,7 +217,11 @@ body {
         width: 90%;
         /* ปรับความกว้าง */
         max-width: 260px;
-        /* ปรับ max-width */
+        padding-left: 30px;
+        /* Adjust padding for icons */
+        margin-top: 15px;
+        margin-bottom: 15px;
+        /* Reduced margin */
         height: 40px;
         /* ลดความสูง */
     }
@@ -188,26 +230,33 @@ body {
         font-size: 14px;
         /* ลดขนาด font */
         margin: 15px 15px 10px 15px;
-        /* ลด margin */
+        padding-left: 30px;
+        /* Adjust padding for icon */
         height: 40px;
         /* ลดความสูง */
     }
 
-    .nva-icon-cat,
-    .nva-icon-admin,
-    .nva-icon-admin1,
-    .nva-icon-admin2,
-    .nva-icon-admin3,
-    .nva-icon-admin4,
-    .nva-icon-admin5,
-    .nva-icon-admin6,
-    .nva-icon-admin7,
-    .nva-icon-admin8,
-    .nva-icon-admin10 {
-        padding-left: 30px;
-        /* เพิ่มระยะห่างระหว่างไอคอนกับข้อความ */
-        background-position: left 10px center;
-        /* ปรับตำแหน่งไอคอนให้เหมาะสม */
+    /* Adjust ::before position for icons on smaller screens */
+    .nva-icon-cat::before,
+    .nva-clickable-icon1[class*="nva-icon-admin"]::before {
+        left: 10px;
+        /* Icon 10px from left inside 30px padding */
+    }
+
+    .nva-clickable-user {
+        /* User link adjustments */
+        padding-left: 50px;
+        /* 35px icon + 10px gap + 5px padding */
+        height: 50px;
+    }
+
+    .nva-icon-user::before {
+        /* User icon adjustments */
+        width: 35px;
+        height: 35px;
+        background-size: 35px 35px;
+        left: 5px;
+        /* Icon 5px from left inside 50px padding */
     }
 }
 
@@ -216,120 +265,101 @@ body {
     /* เพิ่ม breakpoint สำหรับจอเล็กมากๆ เช่น 300px */
     .container {
         min-height: 65vh;
-        padding: 10px;
-    }
-
-
-    .nva-icon-user {
-        background-size: 35px 35px;
-        /* ลดขนาดไอคอน user */
-        padding-left: 45px;
-        /* ลด padding user icon */
-        background-position: left 5px center;
+        padding: 10px 5px;
+        /* Adjust container padding */
     }
 
     .text a,
     .text1 a {
         font-size: 12px;
-        /* ลดขนาด font ของ text และ text1 */
         height: 36px;
-        /* ลดความสูง */
+        padding-left: 25px;
+        /* Further reduce padding for icons */
     }
 
     .text1 a {
         max-width: 220px;
+        width: 95%;
+        /* Links take more width */
     }
 
-    .nva-icon-user {
-        background-position: left -3px center;
+    .nva-icon-cat::before,
+    .nva-clickable-icon1[class*="nva-icon-admin"]::before {
+        left: 8px;
+        /* Icon closer to edge in smaller padding */
     }
 
-    .nva-icon-admin,
-    .nva-icon-admin1,
-    .nva-icon-admin2,
-    .nva-icon-admin3,
-    .nva-icon-admin4,
-    .nva-icon-admin5,
-    .nva-icon-admin6,
-    .nva-icon-admin7,
-    .nva-icon-admin8,
-    .nva-icon-admin10 {
-        padding-left: 30px;
-        /* เพิ่มระยะห่างระหว่างไอคอนกับข้อความ */
-        background-position: left 10px center;
-        /* ปรับตำแหน่งไอคอนให้เหมาะสม */
+    .nva-clickable-user {
+        /* User link adjustments for very small screens */
+        padding-left: 45px;
+        /* 30px icon + 10px gap + 5px padding */
+        height: 45px;
+        font-size: 14px;
+    }
+
+    .nva-icon-user::before {
+        /* User icon adjustments for very small screens */
+        width: 30px;
+        height: 30px;
+        background-size: 30px 30px;
+        left: 5px;
     }
 }
 
-
-.nva-icon-admin2 {
+/* Specific Admin Icons - only background-image needed for ::before */
+.nva-icon-admin2::before {
     background-image: url("./icon/Screenshot\ 2025-06-14\ 210909.png");
-    background-size: 15px 15px;
-    padding-left: 92px;
-    /* จะถูก override ด้วย media query ด้านบนสำหรับจอเล็ก */
-    background-position: left 6px center;
-    line-height: 21px;
 }
 
-.nva-icon-admin3 {
+.nva-icon-admin3::before {
     background-image: url("./icon/Screenshot\ 2025-06-14\ 211220.png");
-    background-size: 15px 15px;
-    padding-left: 92px;
-    /* จะถูก override */
-    background-position: left 6px center;
-    line-height: 21px;
 }
 
-.nva-icon-admin4 {
+.nva-icon-admin4::before {
     background-image: url("./icon/Screenshot\ 2025-06-14\ 211458.png");
-    background-size: 15px 15px;
-    padding-left: 92px;
-    /* จะถูก override */
-    background-position: left 6px center;
-    line-height: 21px;
 }
 
-.nva-icon-admin5 {
+.nva-icon-admin5::before {
     background-image: url("./icon/Screenshot\ 2025-06-14\ 211717.png");
-    background-size: 15px 15px;
-    padding-left: 92px;
-    /* จะถูก override */
-    background-position: left 6px center;
-    line-height: 21px;
 }
 
-.nva-icon-admin6 {
+.nva-icon-admin6::before {
     background-image: url("./icon/Screenshot\ 2025-06-14\ 204826.png");
-    background-size: 15px 15px;
-    padding-left: 92px;
-    /* จะถูก override */
-    background-position: left 6px center;
-    line-height: 21px;
 }
 
-.nva-icon-admin7 {
+/* Uses user icon */
+.nva-icon-admin7::before {
     background-image: url("./icon/Screenshot\ 2025-06-14\ 212212.png");
-    background-size: 15px 15px;
-    padding-left: 92px;
-    /* จะถูก override */
-    background-position: left 6px center;
-    line-height: 21px;
 }
 
-.nva-icon-admin8 {
+.nva-icon-admin8::before {
     background-image: url("./icon/Screenshot\ 2025-06-14\ 212303.png");
-    background-size: 15px 15px;
-    padding-left: 92px;
-    /* จะถูก override */
-    background-position: left 6px center;
-    line-height: 21px;
 }
 
-.nva-icon-admin10 {
+.nva-icon-admin10::before {
     background-image: url("./icon/Screenshot\ 2025-06-14\ 212050.png");
-    background-size: 15px 15px;
-    padding-left: 92px;
-    /* จะถูก override */
-    background-position: left 6px center;
-    line-height: 21px;
 }
+
+/* Definition for .nva-icon-admin (if used elsewhere or as a base)
+   If not used in profile.html context, this could be removed or refactored similarly.
+   For now, keeping its original definition if it's used by other pages.
+*/
+.nva-icon-admin {
+    background-image: url("./icon/icons8-outgoing-call-24.png");
+    background-size: 15px 15px;
+    padding-left: 25px;
+    /* Original padding */
+    background-position: left 6px center;
+    /* Original position */
+    line-height: 21px;
+    /* Original line-height */
+    /* To refactor this like others:
+    display: flex; align-items: center; position: relative; padding-left: 40px;
+    */
+}
+
+/* .nva-icon-admin::before {
+    content: ""; position: absolute; left: 15px; top: 50%; transform: translateY(-50%);
+    width: 15px; height: 15px; background-image: url("./icon/icons8-outgoing-call-24.png");
+    background-size: 15px 15px; background-repeat: no-repeat;
+} */
