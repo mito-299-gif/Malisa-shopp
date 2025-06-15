@@ -46,9 +46,9 @@ body {
     color: #000;
     text-decoration: none;
     position: relative;
-    /* For ::before pseudo-element */
-    padding-left: 70px;
-    /* Space for icon: 50px icon + 10px gap + 10px padding from edge */
+    /* For ::before pseudo-element. Icon left: 10px, width: 50px */
+    padding-left: 75px;
+    /* Space for icon: 50px icon + 15px gap + 10px icon offset from left */
     box-sizing: border-box;
 }
 
@@ -89,9 +89,9 @@ body {
     color: #000;
     text-decoration: none;
     position: relative;
-    /* For ::before */
-    padding-left: 40px;
-    /* Space for icon: 15px icon + 10px gap + 15px padding from edge */
+    /* For ::before. Icon left: 15px, width: 15px */
+    padding-left: 45px;
+    /* Space for icon: 15px icon + 15px gap + 15px icon offset from left */
     box-sizing: border-box;
 }
 
@@ -133,9 +133,9 @@ body {
     color: #000;
     text-decoration: none;
     position: relative;
-    /* For ::before */
-    padding-left: 40px;
-    /* Default padding for icon space */
+    /* For ::before. Icon left: 15px, width: 15px */
+    padding-left: 45px;
+    /* Default padding for icon space: 15px icon + 15px gap + 15px icon offset from left */
     box-sizing: border-box;
 }
 
@@ -217,8 +217,8 @@ body {
         width: 90%;
         /* ปรับความกว้าง */
         max-width: 260px;
-        padding-left: 30px;
-        /* Adjust padding for icons */
+        padding-left: 35px;
+        /* Adjust padding for icons. Icon left: 10px, width: 15px. Gap: 10px */
         margin-top: 15px;
         margin-bottom: 15px;
         /* Reduced margin */
@@ -230,8 +230,8 @@ body {
         font-size: 14px;
         /* ลดขนาด font */
         margin: 15px 15px 10px 15px;
-        padding-left: 30px;
-        /* Adjust padding for icon */
+        padding-left: 35px;
+        /* Adjust padding for icon. Icon left: 10px, width: 15px. Gap: 10px */
         height: 40px;
         /* ลดความสูง */
     }
@@ -245,8 +245,8 @@ body {
 
     .nva-clickable-user {
         /* User link adjustments */
-        padding-left: 50px;
-        /* 35px icon + 10px gap + 5px padding */
+        padding-left: 55px;
+        /* Icon left: 5px, width: 35px. Gap: 15px */
         height: 50px;
     }
 
@@ -273,8 +273,8 @@ body {
     .text1 a {
         font-size: 12px;
         height: 36px;
-        padding-left: 25px;
-        /* Further reduce padding for icons */
+        padding-left: 30px;
+        /* Further reduce padding for icons. Icon left: 5px, width: 15px. Gap: 10px */
     }
 
     .text1 a {
@@ -285,14 +285,15 @@ body {
 
     .nva-icon-cat::before,
     .nva-clickable-icon1[class*="nva-icon-admin"]::before {
-        left: 8px;
-        /* Icon closer to edge in smaller padding */
+        left: 5px;
+        /* ปรับตำแหน่งไอคอนให้อยู่ภายใน padding ที่ลดลง (25px) */
+        /* ไอคอนกว้าง 15px, left 5px จะทำให้มีช่องว่างด้านซ้าย 5px และด้านขวา 5px ก่อนถึงตัวอักษร */
     }
 
     .nva-clickable-user {
         /* User link adjustments for very small screens */
-        padding-left: 45px;
-        /* 30px icon + 10px gap + 5px padding */
+        padding-left: 50px;
+        /* Icon left: 5px, width: 30px. Gap: 15px */
         height: 45px;
         font-size: 14px;
     }
