@@ -12,8 +12,6 @@ body {
 .container {
     width: 90%;
     max-width: 466px;
-    /* Consistent max-width */
-    /* min-height: 100vh; conflicts with max-height: 85vh. Removed. */
     max-height: 100vh;
     left: 0;
     right: 0;
@@ -23,14 +21,11 @@ body {
     border-radius: 10px;
     overflow-y: auto;
     padding: 15px;
-    /* Added some internal padding */
 }
 
 .user {
     max-width: 300px;
-    /* Max width for the user block */
     margin: 20px auto;
-    /* Center the user block */
 }
 
 
@@ -42,13 +37,10 @@ body {
     text-align: center;
     height: 60px;
     font-family: "Noto Sans Lao";
-    /* Consistent font */
     color: #000;
     text-decoration: none;
     position: relative;
-    /* For ::before pseudo-element. Icon left: 10px, width: 50px */
     padding-left: 75px;
-    /* Space for icon: 50px icon + 15px gap + 10px icon offset from left */
     box-sizing: border-box;
 }
 
@@ -56,21 +48,18 @@ body {
     display: block;
     background-repeat: no-repeat;
     text-decoration: none;
-    /* Styles moved to .user a and .nva-icon-user::before */
 }
 
 .nva-icon-user::before {
     content: "";
     position: absolute;
     left: 10px;
-    /* Distance from the left edge of the padding box */
     top: 50%;
     transform: translateY(-50%);
     width: 50px;
     height: 50px;
     background-image: url("./icon/Screenshot\ 2025-06-14\ 204826.png");
     background-size: 50px 50px;
-    /* Explicit size */
     background-repeat: no-repeat;
 }
 
@@ -89,9 +78,7 @@ body {
     color: #000;
     text-decoration: none;
     position: relative;
-    /* For ::before. Icon left: 15px, width: 15px */
     padding-left: 45px;
-    /* Space for icon: 15px icon + 15px gap + 15px icon offset from left */
     box-sizing: border-box;
 }
 
@@ -99,21 +86,18 @@ body {
     display: block;
     background-repeat: no-repeat;
     text-decoration: none;
-    /* Styles moved to .text a and .nva-icon-cat::before */
 }
 
 .nva-icon-cat::before {
     content: "";
     position: absolute;
     left: 15px;
-    /* Distance from the left edge of the padding box */
     top: 50%;
     transform: translateY(-50%);
     width: 15px;
     height: 15px;
     background-image: url("./icon/icons8-left-24.png");
     background-size: 15px 15px;
-    /* Explicit size */
     background-repeat: no-repeat;
 }
 
@@ -127,15 +111,12 @@ body {
     font-family: "Noto Sans Lao";
     border-radius: 15px;
     margin: 20px auto;
-    /* Center links */
     width: 80%;
     max-width: 286px;
     color: #000;
     text-decoration: none;
     position: relative;
-    /* For ::before. Icon left: 15px, width: 15px */
     padding-left: 45px;
-    /* Default padding for icon space: 15px icon + 15px gap + 15px icon offset from left */
     box-sizing: border-box;
 }
 
@@ -143,21 +124,17 @@ body {
     display: block;
     background-repeat: no-repeat;
     text-decoration: none;
-    /* This class is on the <a> tag. Common styles are in .text1 a. Specific icon styles via .nva-icon-adminX::before */
 }
 
-/* Common style for ::before pseudo-elements of admin icons */
 .nva-clickable-icon1[class*="nva-icon-admin"]::before {
     content: "";
     position: absolute;
     left: 15px;
-    /* Distance from the left edge of the padding box */
     top: 50%;
     transform: translateY(-50%);
     width: 15px;
     height: 15px;
     background-size: 15px 15px;
-    /* Explicit size */
     background-repeat: no-repeat;
 }
 
@@ -183,7 +160,6 @@ body {
 
 @media (max-width: 550px) {
 
-    /* หรือ 500px ตามที่ใช้ในไฟล์อื่น */
     .content div h1 {
         font-size: 28px;
     }
@@ -200,73 +176,53 @@ body {
 
     .container {
         min-height: 70vh;
-        /* Adjust min-height for smaller screens */
     }
 
     .user {
         width: 90%;
-        /* Adjust user block width */
         max-width: none;
-        /* Allow it to be wider if needed */
     }
 
     .text1 a {
         margin: 0 auto;
         font-size: 14px;
-        /* ลดขนาด font */
         width: 90%;
-        /* ปรับความกว้าง */
         max-width: 260px;
         padding-left: 35px;
-        /* Adjust padding for icons. Icon left: 10px, width: 15px. Gap: 10px */
         margin-top: 15px;
         margin-bottom: 15px;
-        /* Reduced margin */
         height: 40px;
-        /* ลดความสูง */
     }
 
     .text a {
         font-size: 14px;
-        /* ลดขนาด font */
         margin: 15px 15px 10px 15px;
         padding-left: 35px;
-        /* Adjust padding for icon. Icon left: 10px, width: 15px. Gap: 10px */
         height: 40px;
-        /* ลดความสูง */
     }
 
-    /* Adjust ::before position for icons on smaller screens */
     .nva-icon-cat::before,
     .nva-clickable-icon1[class*="nva-icon-admin"]::before {
         left: 10px;
-        /* Icon 10px from left inside 30px padding */
     }
 
     .nva-clickable-user {
-        /* User link adjustments */
         padding-left: 55px;
-        /* Icon left: 5px, width: 35px. Gap: 15px */
         height: 50px;
     }
 
     .nva-icon-user::before {
-        /* User icon adjustments */
         width: 35px;
         height: 35px;
         background-size: 35px 35px;
         left: 5px;
-        /* Icon 5px from left inside 50px padding */
     }
 }
 
 @media (max-width: 450px) {
-
-    /* เพิ่ม breakpoint สำหรับจอเล็กมากๆ เช่น 300px */
     .container {
         min-height: 65vh;
         padding: 10px 5px;
-        /* Adjust container padding */
     }
 
     .text a,
@@ -274,32 +230,25 @@ body {
         font-size: 12px;
         height: 36px;
         padding-left: 30px;
-        /* Further reduce padding for icons. Icon left: 5px, width: 15px. Gap: 10px */
     }
 
     .text1 a {
         max-width: 220px;
         width: 95%;
-        /* Links take more width */
     }
 
     .nva-icon-cat::before,
     .nva-clickable-icon1[class*="nva-icon-admin"]::before {
         left: 5px;
-        /* ปรับตำแหน่งไอคอนให้อยู่ภายใน padding ที่ลดลง (25px) */
-        /* ไอคอนกว้าง 15px, left 5px จะทำให้มีช่องว่างด้านซ้าย 5px และด้านขวา 5px ก่อนถึงตัวอักษร */
     }
 
     .nva-clickable-user {
-        /* User link adjustments for very small screens */
         padding-left: 50px;
-        /* Icon left: 5px, width: 30px. Gap: 15px */
         height: 45px;
         font-size: 14px;
     }
 
     .nva-icon-user::before {
-        /* User icon adjustments for very small screens */
         width: 30px;
         height: 30px;
         background-size: 30px 30px;
@@ -307,7 +256,6 @@ body {
     }
 }
 
-/* Specific Admin Icons - only background-image needed for ::before */
 .nva-icon-admin2::before {
     background-image: url("./icon/Screenshot\ 2025-06-14\ 210909.png");
 }
@@ -328,7 +276,6 @@ body {
     background-image: url("./icon/Screenshot\ 2025-06-14\ 204826.png");
 }
 
-/* Uses user icon */
 .nva-icon-admin7::before {
     background-image: url("./icon/Screenshot\ 2025-06-14\ 212212.png");
 }
@@ -341,26 +288,10 @@ body {
     background-image: url("./icon/Screenshot\ 2025-06-14\ 212050.png");
 }
 
-/* Definition for .nva-icon-admin (if used elsewhere or as a base)
-   If not used in profile.html context, this could be removed or refactored similarly.
-   For now, keeping its original definition if it's used by other pages.
-*/
 .nva-icon-admin {
     background-image: url("./icon/icons8-outgoing-call-24.png");
     background-size: 15px 15px;
     padding-left: 25px;
-    /* Original padding */
     background-position: left 6px center;
-    /* Original position */
     line-height: 21px;
-    /* Original line-height */
-    /* To refactor this like others:
-    display: flex; align-items: center; position: relative; padding-left: 40px;
-    */
 }
-
-/* .nva-icon-admin::before {
-    content: ""; position: absolute; left: 15px; top: 50%; transform: translateY(-50%);
-    width: 15px; height: 15px; background-image: url("./icon/icons8-outgoing-call-24.png");
-    background-size: 15px 15px; background-repeat: no-repeat;
-} */
