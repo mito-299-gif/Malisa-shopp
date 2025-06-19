@@ -14,11 +14,8 @@ body {
     align-items: center;
     height: 10vh;
     position: relative;
-    /* เพิ่มเพื่อให้ .header-logo-absolute อ้างอิงตำแหน่งได้ */
     width: 100%;
-    /* เพิ่มเพื่อให้ .content เต็มความกว้างของ viewport */
     box-sizing: border-box;
-    /* ป้องกันปัญหา padding หากมีการเพิ่มในอนาคต */
 }
 
 .content div h1 {
@@ -118,7 +115,6 @@ body {
 
 .header-logo-absolute img {
     height: 22px;
-    /* หรือขนาดที่เหมาะสมกับไอคอน icons8-left-24.png */
     width: auto;
     display: block;
 }
