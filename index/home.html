@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="theme-color" content="#ADD8E6">
+    <meta name="theme-color" content="#ffffff" id="meta-theme-color">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/css/home.css">
     <link rel="stylesheet" href="../style/css/shop.css">
@@ -141,23 +141,20 @@
         </div>
     </div>
     <script>
-        const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        function updateThemeColor() {
+            const darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const themeColorMeta = document.querySelector('meta[name="theme-color"]');
 
-        // กำหนดสีตามโหมด
-        const metaThemeColor = document.querySelector('meta[name="theme-color"]');
-        if (metaThemeColor) {
-            if (isDarkMode) {
-                metaThemeColor.setAttribute('content', '#222222'); // สีเข้ม (กลางคืน)
-            } else {
-                metaThemeColor.setAttribute('content', '#ADD8E6'); // สีฟ้าอ่อน (กลางวัน)
+            if (themeColorMeta) {
+                themeColorMeta.setAttribute('content', darkMode ? '#222222' : '#ADD8E6');
             }
         }
 
-        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-            const newColor = e.matches ? '#222222' : '#ADD8E6';
-            document.querySelector('meta[name="theme-color"]').setAttribute('content', newColor);
-        });
+        // เรียกตอนโหลดหน้า
+        updateThemeColor();
 
+        // ถ้าผู้ใช้เปลี่ยน dark mode ระหว่างใช้งาน
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateThemeColor);
     </script>
 
 </body>
