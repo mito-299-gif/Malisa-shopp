@@ -1,6 +1,6 @@
 (function () {
 
-    const inactivityDuration = 1 * 60 * 1000;
+    const inactivityDuration = 5 * 60 * 1000;
     let inactivityTimer;
 
     function redirectToLogin() {
