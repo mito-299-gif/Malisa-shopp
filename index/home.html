@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="theme-color" content="#F3B1FF">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/css/home.css">
     <link rel="stylesheet" href="../style/css/shop.css">
@@ -139,6 +140,11 @@
             <a href="./profile.html" class="nva-clickable-icon-footer nva-icon-img4">ບັນຊີ</a>
         </div>
     </div>
+    <script>
+        const themeColor = getComputedStyle(document.body).getPropertyValue('--theme-color');
+        document.querySelector('meta[name="theme-color"]').setAttribute('content', themeColor.trim());
+    </script>
+
 </body>
 
 </html>
