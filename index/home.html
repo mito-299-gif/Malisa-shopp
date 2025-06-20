@@ -1,54 +1,145 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="laos">
 
 <head>
     <meta charset="UTF-8">
+    <meta name="theme-color" content="#F3B1FF">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Theme Color Test</title>
-
-    <!-- meta สำหรับเปลี่ยนสีแถบสถานะ -->
-    <meta name="theme-color" content="#ffffff" id="meta-theme-color">
-
-    <style>
-        body {
-            font-family: sans-serif;
-            text-align: center;
-            padding: 3rem;
-            background-color: white;
-            color: black;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        body.dark {
-            background-color: #121212;
-            color: white;
-        }
-    </style>
+    <link rel="stylesheet" href="../style/css/home.css">
+    <link rel="stylesheet" href="../style/css/shop.css">
+    <title>shop</title>
 </head>
 
 <body>
+    <div class="content">
+        <div>
+            <h1><b>Malisa shopp</b></h1>
+        </div>
+    </div>
+    <div class="container">
+        <div class="input">
+            <div class="input-container">
+                <a href="#search-action" class="input-icon input-icon-search">
+                </a>
+                <input type="text" placeholder="search">
+                <a href="#camera-action" class="input-icon input-icon-camera">
+                </a>
+            </div>
+        </div>
 
-    <h1>🔆 Theme Color Test</h1>
-    <p>เปลี่ยนโหมดกลางวัน/กลางคืน แล้วรีเฟรชหน้านี้</p>
+        <div class="nva">
+            <div>
+                <a href="./report.html" class="nva-clickable-icon nva-icon-truck">ສົ່ງຟຮີ</a>
+                <a href="./report.html" class="nva-clickable-icon nva-icon-time">ສົ່ງໄວ</a>
+                <a href="./report.html" class="nva-clickable-icon nva-icon-other">ຄຶນສິນຄ້າ</a>
+            </div>
+        </div>
 
-    <script>
-        function updateTheme() {
-            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            const metaTheme = document.querySelector('meta[name="theme-color"]');
+        <div class="order">
 
-            // เปลี่ยนสี meta theme-color
-            metaTheme.setAttribute('content', isDark ? '#222222' : '#ADD8E6');
+            <div>
+                <a href="./shop6.html" class="order-clickable-icon order-icon-order-img1"></a>
+            </div>
+            <div>
+                <a href="./shop3.html" class="order-clickable-icon order-icon-order-img2"></a>
+            </div>
+            <div>
+                <a href="./shop4.html" class="order-clickable-icon order-icon-order-img3"></a>
+            </div>
+            <div>
+                <a href="./shop2.html" class="order-clickable-icon order-icon-order-img4"></a>
+            </div>
+            <div>
+                <a href="./shop1.html" class="order-clickable-icon order-icon-order-img5"></a>
+            </div>
+            <div>
+                <a href="./shop5.html" class="order-clickable-icon order-icon-order-img6"></a>
+            </div>
 
-            // เปลี่ยน background ของ body ด้วย (เพื่อดูผลทันที)
-            document.body.classList.toggle('dark', isDark);
-        }
+        </div>
+    </div>
 
-        updateTheme(); // เรียกทันทีตอนโหลด
+    <div class="order-shop">
+        <div class="shop-img">
+            <a href="#link-to-shop-page" class="shop-clickable-icon shop-icon-shop-img1"></a>
+            <div class="shop-text">
+                <a href="#link-to-shop-page" class="shop-clickable-icon-catr shop-icon-shop-catr">ທິມເບີລີ່ 20,000
+                    ກີບ</a>
+            </div>
+        </div>
 
-        // ถ้าผู้ใช้เปลี่ยนโหมดขณะเปิดเว็บ
-        window.matchMedia('(prefers-color-scheme: dark)')
-            .addEventListener('change', updateTheme);
-    </script>
+        <div class="shop-img">
+            <a href="#link-to-shop-page" class="shop-clickable-icon shop-icon-shop-img2"></a>
+            <div class="shop-text">
+                <a href="#link-to-shop-page" class="shop-clickable-icon-catr shop-icon-shop-catr">ເຊັດຜ້າຫົ່ມ+ໝອນ+ຜ້າປູ
+                    299,000 ກີບ</a>
+            </div>
+        </div>
+
+        <div class="shop-img">
+            <a href="#link-to-shop-page" class="shop-clickable-icon shop-icon-shop-img3"></a>
+            <div class="shop-text">
+                <a href="#link-to-shop-page" class="shop-clickable-icon-catr shop-icon-shop-catr">ກະເປົ່າ CHANEL
+                    63,500,000 ກີບ</a>
+            </div>
+        </div>
+
+        <div class="shop-img">
+            <a href="#link-to-shop-page" class="shop-clickable-icon shop-icon-shop-img4"></a>
+            <div class="shop-text">
+                <a href="#link-to-shop-page" class="shop-clickable-icon-catr shop-icon-shop-catr">ເກີບ newbalance
+                    350,000 ກີບ</a>
+            </div>
+        </div>
+
+        <div class="shop-img">
+            <a href="#link-to-shop-page" class="shop-clickable-icon shop-icon-shop-img5"></a>
+            <div class="shop-text">
+                <a href="#link-to-shop-page" class="shop-clickable-icon-catr shop-icon-shop-catr">ລິບ Dior 550,000
+                    ກີບ</a>
+            </div>
+        </div>
+
+        <div class="shop-img">
+            <a href="#link-to-shop-page" class="shop-clickable-icon shop-icon-shop-img6"></a>
+            <div class="shop-text">
+                <a href="#link-to-shop-page" class="shop-clickable-icon-catr shop-icon-shop-catr">Dior + Louis
+                    vuitton 18,760,000 ກີບ</a>
+            </div>
+        </div>
+
+        <div class="shop-img">
+            <a href="#link-to-shop-page" class="shop-clickable-icon shop-icon-shop-img7"></a>
+            <div class="shop-text">
+                <a href="#link-to-shop-page" class="shop-clickable-icon-catr shop-icon-shop-catr">ຊຸດໂຕະ+ຕັ່ງ+ແວ່ນ
+                    699,000 ກີບ</a>
+            </div>
+        </div>
+
+        <div class="shop-img">
+            <a href="#link-to-shop-page" class="shop-clickable-icon shop-icon-shop-img8"></a>
+            <div class="shop-text">
+                <a href="#link-to-shop-page" class="shop-clickable-icon-catr shop-icon-shop-catr">ຊຸດເດສສັ້ນລາຍລູກໄມ້
+                    299,000 ກີບ</a>
+            </div>
+        </div>
+
+        <div class="shop-img">
+            <a href="#link-to-shop-page" class="shop-clickable-icon shop-icon-shop-img9"></a>
+            <div class="shop-text">
+                <a href="#link-to-shop-page" class="shop-clickable-icon-catr shop-icon-shop-catr">iMac Pro ປີ 2023
+                    32,830,000 ກີບ</a>
+            </div>
+        </div>
+    </div>
+    <div class="nva-footer">
+        <div>
+            <a href="./home.html" class="nva-clickable-icon-footer nva-icon-img1">ໜ້າຫຼັກ</a>
+            <a href="./cat.html" class="nva-clickable-icon-footer nva-icon-img2">ກະຕ່າ</a>
+            <a href="./Call-Center.html" class="nva-clickable-icon-footer nva-icon-img3">ຂໍ້ຄວາມ</a>
+            <a href="./profile.html" class="nva-clickable-icon-footer nva-icon-img4">ບັນຊີ</a>
+        </div>
+    </div>
 
 </body>
 

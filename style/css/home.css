@@ -8,10 +8,6 @@ body {
     padding-bottom: 10vh;
 }
 
-body.light-theme {
-    --theme-color: #ADD8E6;
-}
-
 
 .content {
     display: flex;
