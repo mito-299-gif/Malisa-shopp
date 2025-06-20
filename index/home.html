@@ -152,6 +152,12 @@
                 metaThemeColor.setAttribute('content', '#ADD8E6'); // สีฟ้าอ่อน (กลางวัน)
             }
         }
+
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+            const newColor = e.matches ? '#222222' : '#ADD8E6';
+            document.querySelector('meta[name="theme-color"]').setAttribute('content', newColor);
+        });
+
     </script>
 
 </body>
