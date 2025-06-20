@@ -141,6 +141,33 @@
         </div>
     </div>
 
+    <script>
+        (function () {
+            // ตั้งเวลาสำหรับการไม่ใช้งาน (เช่น 5 นาที)
+            const inactivityDuration = 5 * 60 * 1000; // 5 นาที ในหน่วยมิลลิวินาที
+            let inactivityTimer;
+
+            function redirectToLogin() {
+                // เปลี่ยนเส้นทางไปยังหน้า login.html
+                // ตรวจสอบให้แน่ใจว่า path ไปยัง login.html ถูกต้อง
+                window.location.href = './login.html';
+            }
+
+            function resetInactivityTimer() {
+                clearTimeout(inactivityTimer);
+                inactivityTimer = setTimeout(redirectToLogin, inactivityDuration);
+            }
+
+            // ติดตามกิจกรรมของผู้ใช้เพื่อรีเซ็ตไทม์เมอร์
+            window.addEventListener('mousemove', resetInactivityTimer, false);
+            window.addEventListener('mousedown', resetInactivityTimer, false);
+            window.addEventListener('keypress', resetInactivityTimer, false);
+            window.addEventListener('touchmove', resetInactivityTimer, false); // สำหรับอุปกรณ์สัมผัส
+            window.addEventListener('scroll', resetInactivityTimer, true);    // ใช้ capture phase สำหรับ scroll
+            // เริ่มต้นไทม์เมอร์เมื่อหน้าโหลด
+            resetInactivityTimer();
+        })();
+    </script>
 </body>
 
 </html>
