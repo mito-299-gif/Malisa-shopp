@@ -3,6 +3,12 @@
     padding: 0;
 }
 
+@font-face {
+    font-family: 'Noto Sans Lao';
+    src: url('../font/NOTOSANSLAO-EXTRABOLD.TTF') format('truetype');
+
+}
+
 body {
     background-color: #F3B1FF;
 }
