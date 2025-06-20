@@ -141,9 +141,16 @@
         </div>
     </div>
     <script>
+        const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        // กำหนดสีตามโหมด
         const metaThemeColor = document.querySelector('meta[name="theme-color"]');
         if (metaThemeColor) {
-            metaThemeColor.setAttribute('content', '#ADD8E6'); // สีฟ้าอ่อน
+            if (isDarkMode) {
+                metaThemeColor.setAttribute('content', '#222222'); // สีเข้ม (กลางคืน)
+            } else {
+                metaThemeColor.setAttribute('content', '#ADD8E6'); // สีฟ้าอ่อน (กลางวัน)
+            }
         }
     </script>
 
