@@ -96,6 +96,11 @@
     background-size: cover;
 }
 
+.shop-icon-shop-img10 {
+    background-image: url("../MacBook/d93082ade70c28a233c07eab847e9c39a7537fab.jpg");
+    background-size: cover;
+}
+
 .shop-icon-shop-catr {
     background-image: url('./icon/icons8-shopping-cart-96.png');
     background-size: 16px 16px;

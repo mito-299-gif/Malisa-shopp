@@ -103,6 +103,11 @@
     background-position: right 10px center;
 }
 
+.shop-icon-shop-img10 {
+    background-image: url("../furniture/ed32c2010d5a69b740f7325673f7548337d01101\ \(1\).jpg");
+    background-size: cover;
+}
+
 @media (max-width: 1300px) {
     .order-shop {
         padding: 15px;
